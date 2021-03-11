@@ -9,10 +9,6 @@ async - aio_owoify()\n
 Our github link - https://github.com/Nimboss2411/OwOpy
 '''
 
-'''
-make it so "wHAT'S thIS" (in any case, with or without apostrophe) gets replaced by OwO wHAT'S tHIS
-'''
-
 #Modules
 import random
 import asyncio
