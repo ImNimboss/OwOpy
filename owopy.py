@@ -11,7 +11,6 @@ Our github link - https://github.com/Nimboss2411/OwOpy
 
 #Modules
 import random
-import asyncio
 
 #Global variable initialisation
 owo_vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
