@@ -10,4 +10,6 @@ The aio_owoify must be used in async form to prevent errors.
 If you do not know the difference between sync and async, it is recommended to use the normal owoify() (synced function) as it is the most basic and is used for 
 most programs and applications.
 
+Note that python 3.6 or above is required due to the use of F-strings in the source code.
+
 Enjoy using it 💻
