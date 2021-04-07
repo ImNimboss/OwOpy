@@ -6,7 +6,7 @@ If you do not know the difference between sync and async, it is recommended to u
 It has 2 functions (sync and async) -\n
 sync - owoify()\n
 async - aio_owoify()\n
-Our github link - https://github.com/Nimboss2411/OwOpy
+The module\'s github link - https://github.com/Nimboss2411/OwOpy
 '''
 
 #Modules
@@ -14,11 +14,18 @@ import random
 
 #Global variable initialisation
 owo_vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
-owo_emote_file = open('owo_emotes.txt')
-owo_emotes1 = owo_emote_file.readlines()
-owo_emotes = []
-for emote in owo_emotes1:
-    owo_emotes.append(emote[:len(emote) - 1]) #this loop was to remove the \n newline characters from all the emojis
+owo_emotes = ['^w^', '>w< ', 'UwU ', '(・`ω\\´・)', 
+    '(´・ω・\\`)', 'OwO', '◔w◔ ', '( ͡o ω ͡o )', '(O꒳O)', 
+    '( °ω° )', '( ͡o ꒳ ͡o )', 'ღ(O꒳Oღ)', 
+    '*𝓷𝓾𝔃𝔃𝓵𝓮𝓼 𝔂𝓸𝓾𝓻 𝓬𝓱𝓮𝓼𝓽*', '‿︵*𝓇𝒶𝓌𝓇*‿︵ ʘwʘ', 
+    '✼ ҉♡ (。O⁄ ⁄ω⁄ ⁄ O。) ҉♡ ✼', '✧･ﾟ: *✧･ﾟ:*(OwO)*:･ﾟ✧*:･ﾟ✧', 
+    'ᎧᏇᎧ', '♡w♡', 'ÒwÓ', '≧◡≦', '✧(˘•ω•˘)ง', '~(˶‾᷄ꈊ‾᷅˵)~', 
+    'ᕙ(⇀w↼‶)ᕗ', '༼ ༎ຶ w ༎ຶ༽', '( ͡° w ͡°)', '(•w•)', '♤w♤', '♧w♧', 
+    '(๑و•̀ω•́)و', '(˶‾᷄ ⁻̫ ‾᷅˵)', '꒰๑´•.̫ • `๑꒱', '・ω・', '>ω^', 
+    '{・ω-*}', 'ˁ(⦿@ᴥ⦿*)ˀ', 'ʕ✿๑•́ ᴥ •̀๑✿ʔ', '(•̯͡.•̯͡)', '꒰◍ᐡᐤᐡ◍꒱', 
+    '༼ (´・ω・`) ༽', '♥(⇀ᆽ↼ﾐ)∫', '✿(≗ﻌ≗^)', '( ͒ ඉ .̫ ඉ ͒)', 
+    '( ^◡^)', '^•ﻌ•^', '{ @❛ꈊ❛@ }', '^•ﻌ•^ฅ', '(✿^U^)/', 
+    '(≗ﻌ≗^)']
 
 #Normal owoify function (synchronous)
 def owoify(owo_string: str, level: int = 2):
