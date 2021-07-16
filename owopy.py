@@ -23,7 +23,6 @@ owo_emotes = ['^w^', '>w< ', 'UwU ', '(・`ω\\´・)',
     '( ^◡^)', '^•ﻌ•^', '{ @❛ꈊ❛@ }', '^•ﻌ•^ฅ', '(✿^U^)/', 
     '(≗ﻌ≗^)']
 
-#Normal owoify function (synchronous)
 def owoify(owo_string: str, level: int = 2):
     '''
     OwOifies (and UwUifies) your text!\n
