@@ -22,6 +22,7 @@ owo_emotes = ['^w^', '>w< ', 'UwU ', '(・`ω\\´・)',
     '༼ (´・ω・`) ༽', '♥(⇀ᆽ↼ﾐ)∫', '✿(≗ﻌ≗^)', '( ͒ ඉ .̫ ඉ ͒)', 
     '( ^◡^)', '^•ﻌ•^', '{ @❛ꈊ❛@ }', '^•ﻌ•^ฅ', '(✿^U^)/', 
     '(≗ﻌ≗^)']
+__version__ = '0.0.2'
 
 def owoify(owo_string: str, level: int = 2):
     '''
@@ -32,51 +33,32 @@ def owoify(owo_string: str, level: int = 2):
     The higher the level the more OwOified your text will be, try it out!
     '''
 
-    if not isinstance(owo_string, str):
-        raise ValueError('n...nani?! the sentence awgument must be a stwing!')
-        return
-
-    if not isinstance(level, int):
-        raise ValueError('b...baka?! the level awgument must be a non-decimal numbew!')
-        return
-
-    if not level in [1, 2, 3]:
-        raise ValueError('o...owo?! the level awgument must be between 1 and thwee (1 and 3 incwuded!)')
-        return
+    if not isinstance(owo_string, str): raise ValueError('n...nani?! the sentence awgument must be a stwing!')
+    if not isinstance(level, int): raise ValueError('b...baka?! the level awgument must be a non-decimal numbew!')
+    if not level in [1, 2, 3]: raise ValueError('o...owo?! the level awgument must be between 1 and thwee (1 and 3 incwuded!)')
     
-    owo_string = owo_string.replace('r', 'w')
-    owo_string = owo_string.replace('R', 'W')
-    owo_string = owo_string.replace('l', 'w')
-    owo_string = owo_string.replace('L', 'W')
-    owo_string = owo_string.replace('b', 'bw')
-    owo_string = owo_string.replace('B', 'BW')
+    owo_string = owo_string.replace('r', 'w').replace('R', 'W').replace('l', 'w').replace('L', 'W').replace('b', 'bw').replace('B', 'BW')
     
     if level == 3:
         owo_string = owo_string.replace('o', 'owo')
-        owo_string = owo_string.replace('O', 'OwO')
-        owo_string = owo_string.replace('!', f'! {random.choice(owo_emotes)}{random.choice(owo_emotes)}')
-        owo_string = owo_string.replace('?', f'? {random.choice(owo_emotes)}{random.choice(owo_emotes)}')
-        owo_string = owo_string.replace('.', f'{random.choice(owo_emotes)}{random.choice(owo_emotes)}')
-    if level == 2:
+        .replace('O', 'OwO')
+        .replace('!', f'! {random.choice(owo_emotes)}{random.choice(owo_emotes)}')
+        .replace('?', f'? {random.choice(owo_emotes)}{random.choice(owo_emotes)}')
+        .replace('.', f'{random.choice(owo_emotes)}{random.choice(owo_emotes)}')
+    elif level == 2:
         owo_string = owo_string.replace('!', f'! {random.choice(owo_emotes)}')
-        owo_string = owo_string.replace('?', f'? {random.choice(owo_emotes)}')
-        owo_string = owo_string.replace('.', f'{random.choice(owo_emotes)}')
+        .replace('?', f'? {random.choice(owo_emotes)}')
+        .replace('.', f'{random.choice(owo_emotes)}')
 
     for vowel in owo_vowels:
-        if f'n{vowel}' in owo_string:
-            owo_string = owo_string.replace(f'n{vowel}', f'ny{vowel}')
-        elif f'N{vowel}' in owo_string:
-            owo_string = owo_string.replace(f'N{vowel}', f'NY{vowel}')
+        if f'n{vowel}' in owo_string: owo_string = owo_string.replace(f'n{vowel}', f'ny{vowel}')
+        elif f'N{vowel}' in owo_string: owo_string = owo_string.replace(f'N{vowel}', f'NY{vowel}')
         
     for vowel in owo_vowels:
-        if f'b{vowel}' in owo_string:
-            owo_string = owo_string.replace(f'b{vowel}', f'bw{vowel}')
-        elif f'B{vowel}' in owo_string:
-            owo_string = owo_string.replace(f'B{vowel}', f'BW{vowel}')
+        if f'b{vowel}' in owo_string: owo_string = owo_string.replace(f'b{vowel}', f'bw{vowel}')
+        elif f'B{vowel}' in owo_string: owo_string = owo_string.replace(f'B{vowel}', f'BW{vowel}')
     
-    if level == 2:
-        owo_string = f'{random.choice(owo_emotes)} {owo_string} {random.choice(owo_emotes)}'
-    elif level == 3:
-        owo_string = f'{random.choice(owo_emotes)} {random.choice(owo_emotes)} {owo_string} {random.choice(owo_emotes)} {random.choice(owo_emotes)}'
+    if level == 2: owo_string = f'{random.choice(owo_emotes)} {owo_string} {random.choice(owo_emotes)}'
+    elif level == 3: owo_string = f'{random.choice(owo_emotes)} {random.choice(owo_emotes)} {owo_string} {random.choice(owo_emotes)} {random.choice(owo_emotes)}'
     
     return owo_string
