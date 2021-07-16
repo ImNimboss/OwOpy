@@ -1,6 +1,9 @@
 This is the GitHub for the Python module OwOpy!
 This module OwOifies your sentence better than any other.
 
+Installation -
+`pip3 install git+https://github.com/Nimboss2411/OwOpy.git#egg=owopy`
+
 By "OwOifies your sentence" I mean it turns your sentence into japanese "furry" baby babblespeak :>
 
 It has 1 function - owoify(string).
