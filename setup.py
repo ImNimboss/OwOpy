@@ -19,6 +19,6 @@ setup(
         'Programming Language :: Python :: 3.9'
     ],
     keywords = 'owo owoify',
-    packages = ['OwOpy'],
+    packages = ['owopy'],
     install_requires = []
 )
