@@ -7,4 +7,4 @@ It has 1 function - owoify(string).
 
 Note that python 3.6 or above is required due to the use of F-strings in the source code.
 
-Enjoy using it 💻
+Enjoy using it :>
