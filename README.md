@@ -10,6 +10,6 @@ By "OwOifies your sentence" I mean it turns your sentence into japanese "furry" 
 
 It has 1 function - owoify(string).
 
-Note that python 3.6 or above is required due to the use of f-strings in the source code.
+Note that [python 3.6](https://www.python.org/downloads/release/python-360/) or above is required due to the use of f-strings in the source code.
 
 Enjoy using it :>
