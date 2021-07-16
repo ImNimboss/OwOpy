@@ -1,14 +1,9 @@
 This is the GitHub for the Python module OwOpy!
 This module OwOifies your sentence better than any other.
-Available in both synchronous (normal) form and asynchronous (async/await syntax) form.
 
 By "OwOifies your sentence" I mean it turns your sentence into japanese "furry" baby babblespeak :>
 
-It has 2 functions - owoify('example_string') and aio_owoify('example_string').
-The aio_owoify must be used in async form to prevent errors.
-
-If you do not know the difference between sync and async, it is recommended to use the normal owoify() (synced function) as it is the most basic and is used for 
-most programs and applications.
+It has 1 function - owoify(string).
 
 Note that python 3.6 or above is required due to the use of F-strings in the source code.
 
