@@ -4,7 +4,7 @@ This module OwOifies your sentence better than any other.
 Installation -
 ```pip3 install git+https://github.com/Nimboss2411/OwOpy.git#egg=owopy```
 
-This module has no dependencies, it only uses one python default package - `random`.
+This module has no dependencies, it only uses one python default package's function - [random.choice](https://docs.python.org/3/library/random.html#random.choice).
 
 By "OwOifies your sentence" I mean it turns your sentence into japanese "furry" baby babblespeak :>
 
