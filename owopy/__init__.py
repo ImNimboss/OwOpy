@@ -6,7 +6,7 @@ The module\'s github link - https://github.com/Nimboss2411/OwOpy
 '''
 
 #Modules
-import random
+from random import choice
 
 #Global variable initialisation
 owo_vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
@@ -42,13 +42,13 @@ def owoify(owo_string: str, level: int = 2):
     if level == 3:
         owo_string = owo_string.replace('o', 'owo')
         .replace('O', 'OwO')
-        .replace('!', f'! {random.choice(owo_emotes)}{random.choice(owo_emotes)}')
-        .replace('?', f'? {random.choice(owo_emotes)}{random.choice(owo_emotes)}')
-        .replace('.', f'{random.choice(owo_emotes)}{random.choice(owo_emotes)}')
+        .replace('!', f'! {choice(owo_emotes)}{choice(owo_emotes)}')
+        .replace('?', f'? {choice(owo_emotes)}{choice(owo_emotes)}')
+        .replace('.', f'{choice(owo_emotes)}{choice(owo_emotes)}')
     elif level == 2:
-        owo_string = owo_string.replace('!', f'! {random.choice(owo_emotes)}')
-        .replace('?', f'? {random.choice(owo_emotes)}')
-        .replace('.', f'{random.choice(owo_emotes)}')
+        owo_string = owo_string.replace('!', f'! {choice(owo_emotes)}')
+        .replace('?', f'? {choice(owo_emotes)}')
+        .replace('.', f'{choice(owo_emotes)}')
 
     for vowel in owo_vowels:
         if f'n{vowel}' in owo_string: owo_string = owo_string.replace(f'n{vowel}', f'ny{vowel}')
@@ -58,7 +58,7 @@ def owoify(owo_string: str, level: int = 2):
         if f'b{vowel}' in owo_string: owo_string = owo_string.replace(f'b{vowel}', f'bw{vowel}')
         elif f'B{vowel}' in owo_string: owo_string = owo_string.replace(f'B{vowel}', f'BW{vowel}')
     
-    if level == 2: owo_string = f'{random.choice(owo_emotes)} {owo_string} {random.choice(owo_emotes)}'
-    elif level == 3: owo_string = f'{random.choice(owo_emotes)} {random.choice(owo_emotes)} {owo_string} {random.choice(owo_emotes)} {random.choice(owo_emotes)}'
+    if level == 2: owo_string = f'{choice(owo_emotes)} {owo_string} {choice(owo_emotes)}'
+    elif level == 3: owo_string = f'{choice(owo_emotes)} {choice(owo_emotes)} {owo_string} {choice(owo_emotes)} {choice(owo_emotes)}'
     
     return owo_string
