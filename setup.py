@@ -4,7 +4,7 @@ with open('README.md') as readme: readme = readme.read()
 
 setup(
     name = 'owopy',
-    version = '0.0.1',
+    version = '0.0.2',
     description = 'An easy to use module to OwOify your text - turn it into furry Japanese Baby Babblespeak!',
     long_description = readme,
     url = 'https://github.com/Nimboss2411/OwOpy',
